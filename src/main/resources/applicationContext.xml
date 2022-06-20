@@ -11,5 +11,14 @@
           class="by.home.chaplinskiy.springcourse.TestBean">
         <constructor-arg value="YuriyChaplinskiy"/>
     </bean>
+    <bean id="musicTechoBean"
+          class="by.home.chaplinskiy.springcourse.TechnoMusic">
+    </bean>
+    <bean id="musicPopBean"
+          class="by.home.chaplinskiy.springcourse.PopMusic">
+    </bean>
+    <bean id="musicBean"
+          class="by.home.chaplinskiy.springcourse.RockMusic">
+    </bean>
 
 </beans>
