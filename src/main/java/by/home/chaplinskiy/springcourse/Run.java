@@ -1,5 +1,4 @@
 package by.home.chaplinskiy.springcourse;
-
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Run {
