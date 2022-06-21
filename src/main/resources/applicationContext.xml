@@ -21,9 +21,15 @@
           class="by.home.chaplinskiy.springcourse.MusicPlayer">
         <constructor-arg ref="musicBean"/>
     </bean>
- <bean id="musicPlayerTechno"
+    <bean id="musicPlayerTechno"
           class="by.home.chaplinskiy.springcourse.MusicPlayer">
         <constructor-arg ref="musicTechnoBean"/>
+    </bean>
+    <bean id="musicPlayerPop"
+          class="by.home.chaplinskiy.springcourse.MusicPlayer">
+        <property name="music" ref="musicPopBean"/>
+        <property name="name" value="Sony"/>
+        <property name="volume" value="15"/>
     </bean>
 
 

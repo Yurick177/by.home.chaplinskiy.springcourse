@@ -27,6 +27,10 @@ public class Run {
         MusicPlayer musicPlayer5 = context.getBean("musicPlayerTechno", MusicPlayer.class);
         musicPlayer5.playMusic();
 
+        MusicPlayer musicPlayer6 = context.getBean("musicPlayerPop", MusicPlayer.class);
+        musicPlayer6.playMusic();
+        System.out.println(musicPlayer6.getVolume());
+        System.out.println(musicPlayer6.getName());
     }
 
 }
