@@ -1,4 +1,5 @@
 package by.home.chaplinskiy.springcourse;
+
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class Run {
@@ -19,6 +20,12 @@ public class Run {
         Music music = context.getBean("musicBean", Music.class);
         MusicPlayer musicPlayer3 = new MusicPlayer(music);
         musicPlayer3.playMusic();
+
+        MusicPlayer musicPlayer4 = context.getBean("musicPlayer", MusicPlayer.class);
+        musicPlayer4.playMusic();
+
+        MusicPlayer musicPlayer5 = context.getBean("musicPlayerTechno", MusicPlayer.class);
+        musicPlayer5.playMusic();
 
     }
 
