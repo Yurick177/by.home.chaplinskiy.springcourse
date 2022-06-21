@@ -8,8 +8,8 @@ public class Run {
         TestBean testBean = context.getBean("testBean", TestBean.class);
         System.out.println(testBean.getName());
 
-        Music musicTecho = context.getBean("musicTechoBean", Music.class);
-        MusicPlayer musicPlayer1 = new MusicPlayer(musicTecho);
+        Music musicTechno = context.getBean("musicTechnoBean", Music.class);
+        MusicPlayer musicPlayer1 = new MusicPlayer(musicTechno);
         musicPlayer1.playMusic();
 
         Music musicPop = context.getBean("musicPopBean", Music.class);

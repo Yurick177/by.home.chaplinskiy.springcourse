@@ -8,7 +8,7 @@
           class="by.home.chaplinskiy.springcourse.TestBean">
         <constructor-arg value="YuriyChaplinskiy"/>
     </bean>
-    <bean id="musicTechoBean"
+    <bean id="musicTechnoBean"
           class="by.home.chaplinskiy.springcourse.TechnoMusic">
     </bean>
     <bean id="musicPopBean"
