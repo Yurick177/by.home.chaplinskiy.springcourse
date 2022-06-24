@@ -59,6 +59,7 @@ public class Run {
         System.out.println(comparison2);
         System.out.println(musicPlayer7One);
         System.out.println(musicPlayer8Two);
+        context.close();
 
     }
 
