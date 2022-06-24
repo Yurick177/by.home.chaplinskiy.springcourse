@@ -28,14 +28,14 @@
         <constructor-arg ref="musicTechnoBean"/>
     </bean>
     <bean id="musicPlayerPop"
-          class="by.home.chaplinskiy.springcourse.MusicPlayer">
+          class="by.home.chaplinskiy.springcourse.MusicPlayer"
+          scope="prototype">
         <property name="music" ref="musicPopBean"/>
         <property name="name" value="${musicPlayer.name}"/>
         <property name="volume" value="${musicPlayer.volume}"/>
     </bean>
     <bean id="musicPlayerRock"
-          class="by.home.chaplinskiy.springcourse.MusicPlayer"
-          scope="prototype">
+          class="by.home.chaplinskiy.springcourse.MusicPlayer">
         <property name="music" ref="musicBean"/>
         <property name="name" value="Sony"/>
         <property name="volume" value="15"/>
