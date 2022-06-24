@@ -2,6 +2,12 @@ package by.home.chaplinskiy.springcourse;
 
 public class TechnoMusic implements Music{
 
+    private TechnoMusic(){}
+
+    public static TechnoMusic getTechnoMusic(){
+        return new TechnoMusic();
+    }
+
     public void DoMyInitMethod(){
         System.out.println("вызываюсь до метода getBean ");
     }
