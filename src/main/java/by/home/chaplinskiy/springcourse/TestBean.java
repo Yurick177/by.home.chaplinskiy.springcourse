@@ -1,5 +1,8 @@
 package by.home.chaplinskiy.springcourse;
 
+import org.springframework.stereotype.Component;
+
+
 public class TestBean {
 
     private String name;
