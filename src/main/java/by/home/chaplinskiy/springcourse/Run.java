@@ -28,16 +28,38 @@ public class Run {
         musicPlayer5.playMusic();
         System.out.println();
 
-        MusicPlayer musicPlayer6 = context.getBean("musicPlayerPop", MusicPlayer.class);
-        musicPlayer6.playMusic();
-        System.out.println(musicPlayer6.getVolume());
-        System.out.println(musicPlayer6.getName());
+        MusicPlayer musicPlayer6One = context.getBean("musicPlayerPop", MusicPlayer.class);
+        musicPlayer6One.playMusic();
+        System.out.println(musicPlayer6One.getVolume());
+        System.out.println(musicPlayer6One.getName());
+
+        MusicPlayer musicPlayer6Two = context.getBean("musicPlayerPop", MusicPlayer.class);
+        musicPlayer6Two.playMusic();
+        System.out.println(musicPlayer6Two.getVolume());
+        System.out.println(musicPlayer6Two.getName());
+
+        boolean comparison1 = musicPlayer6One == musicPlayer6Two;
+        System.out.println(comparison1);
+        System.out.println(musicPlayer6One);
+        System.out.println(musicPlayer6Two);
+
         System.out.println();
 
-        MusicPlayer musicPlayer7 = context.getBean("musicPlayerRock", MusicPlayer.class);
-        musicPlayer7.playMusic();
-        System.out.println(musicPlayer7.getVolume());
-        System.out.println(musicPlayer7.getName());
+        MusicPlayer musicPlayer7One = context.getBean("musicPlayerRock", MusicPlayer.class);
+        musicPlayer7One.playMusic();
+        System.out.println(musicPlayer7One.getVolume());
+        System.out.println(musicPlayer7One.getName());
+
+        MusicPlayer musicPlayer8Two = context.getBean("musicPlayerRock", MusicPlayer.class);
+        musicPlayer8Two.playMusic();
+        System.out.println(musicPlayer8Two.getVolume());
+        System.out.println(musicPlayer8Two.getName());
+
+        boolean comparison2 = musicPlayer8Two == musicPlayer7One;
+        System.out.println(comparison2);
+        System.out.println(musicPlayer7One);
+        System.out.println(musicPlayer8Two);
+
     }
 
 }
