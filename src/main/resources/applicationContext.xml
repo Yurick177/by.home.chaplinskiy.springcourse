@@ -11,7 +11,9 @@
         <constructor-arg value="YuriyChaplinskiy"/>
     </bean>
     <bean id="musicTechnoBean"
-          class="by.home.chaplinskiy.springcourse.TechnoMusic">
+          class="by.home.chaplinskiy.springcourse.TechnoMusic"
+          init-method="DoMyInitMethod"
+          destroy-method="DoMyDestroy">
     </bean>
     <bean id="musicPopBean"
           class="by.home.chaplinskiy.springcourse.PopMusic">
