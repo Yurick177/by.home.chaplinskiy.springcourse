@@ -13,7 +13,8 @@
     <bean id="musicTechnoBean"
           class="by.home.chaplinskiy.springcourse.TechnoMusic"
           init-method="DoMyInitMethod"
-          destroy-method="DoMyDestroy">
+          destroy-method="DoMyDestroy"
+          factory-method="getTechnoMusic">
     </bean>
     <bean id="musicPopBean"
           class="by.home.chaplinskiy.springcourse.PopMusic">
