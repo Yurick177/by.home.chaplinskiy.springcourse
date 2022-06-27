@@ -7,10 +7,10 @@ public class Run {
     public static void main(String[] args) {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         MusicPlayer technoMusicPlayer = context.getBean(MusicPlayer.class);
-        technoMusicPlayer.playMusic();
+        System.out.println(technoMusicPlayer.playMusic());
 
-        Device device = context.getBean(Device.class);
-        System.out.println(device);
+        Device device1 = context.getBean(Device.class);
+        System.out.println(device1);
     }
 
 }
