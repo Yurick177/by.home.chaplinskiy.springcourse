@@ -10,7 +10,7 @@ public class MusicPlayer {
     private String name;
     private int volume;
 
-    @Autowired
+
     public MusicPlayer(Music music) {
         this.music = music;
     }
@@ -35,6 +35,7 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
+    @Autowired
     public void setTechnoMusic(Music music) {
         this.music = music;
     }
