@@ -1,16 +1,21 @@
 package by.home.chaplinskiy.springcourse;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MusicPlayer {
 
-    private  Music music;
+    private TechnoMusic technoMusic;
     private String name;
     private int volume;
 
-    public MusicPlayer(Music music) {
-        this.music = music;
+    @Autowired
+    public MusicPlayer(TechnoMusic technoMusic) {
+        this.technoMusic = technoMusic;
     }
 
-    public MusicPlayer(){
+    public MusicPlayer() {
 
     }
 
@@ -30,12 +35,12 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public void setMusic(Music music){
-       this.music = music;
+    public void setTechnoMusic(TechnoMusic technoMusic) {
+        this.technoMusic = technoMusic;
     }
 
-    public void playMusic(){
-        System.out.println("Playing: " + music.getSong());
+    public void playMusic() {
+        System.out.println("Playing: " + technoMusic.getSong());
     }
 
 }
