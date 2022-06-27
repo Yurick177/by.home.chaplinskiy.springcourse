@@ -8,6 +8,9 @@ public class Run {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         MusicPlayer technoMusicPlayer = context.getBean(MusicPlayer.class);
         technoMusicPlayer.playMusic();
+
+        Device device = context.getBean(Device.class);
+        System.out.println(device);
     }
 
 }

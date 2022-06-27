@@ -11,7 +11,7 @@ public class MusicPlayer {
     private String name;
     private int volume;
 
-@Autowired
+    @Autowired
     public MusicPlayer(TechnoMusic technoMusic, RockMusic rockMusic) {
         this.technoMusic = technoMusic;
         this.rockMusic = rockMusic;
@@ -41,9 +41,8 @@ public class MusicPlayer {
         this.music = music;
     }
 
-    public void playMusic() {
-        System.out.println("Playing: " + technoMusic.getSong());
-        System.out.println("Playing: " + rockMusic.getSong());
+    public String playMusic() {
+        return "Playing: " + technoMusic.getSong();
     }
 
 }
