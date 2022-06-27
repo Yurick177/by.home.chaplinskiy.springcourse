@@ -5,14 +5,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-    @Autowired
     private Music music;
+    private TechnoMusic technoMusic;
+    private RockMusic rockMusic;
     private String name;
     private int volume;
 
-
-    public MusicPlayer(Music music) {
-        this.music = music;
+@Autowired
+    public MusicPlayer(TechnoMusic technoMusic, RockMusic rockMusic) {
+        this.technoMusic = technoMusic;
+        this.rockMusic = rockMusic;
     }
 
     public MusicPlayer() {
@@ -35,12 +37,13 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public void setTechnoMusic(Music music) {
+    public void setMusic(Music music) {
         this.music = music;
     }
 
     public void playMusic() {
-        System.out.println("Playing: " + music.getSong());
+        System.out.println("Playing: " + technoMusic.getSong());
+        System.out.println("Playing: " + rockMusic.getSong());
     }
 
 }
