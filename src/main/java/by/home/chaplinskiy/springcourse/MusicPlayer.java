@@ -5,7 +5,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-
+    @Autowired
     private Music music;
     private String name;
     private int volume;
@@ -35,7 +35,6 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    @Autowired
     public void setTechnoMusic(Music music) {
         this.music = music;
     }
