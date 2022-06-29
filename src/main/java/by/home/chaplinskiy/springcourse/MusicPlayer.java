@@ -1,21 +1,16 @@
 package by.home.chaplinskiy.springcourse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
+    @Autowired
+    @Qualifier("musicPopBean")
     private Music music;
-    private TechnoMusic technoMusic;
-    private RockMusic rockMusic;
     private String name;
     private int volume;
-
-    @Autowired
-    public MusicPlayer(TechnoMusic technoMusic, RockMusic rockMusic) {
-        this.technoMusic = technoMusic;
-        this.rockMusic = rockMusic;
-    }
 
     public MusicPlayer() {
 
@@ -42,7 +37,8 @@ public class MusicPlayer {
     }
 
     public String playMusic() {
-        return "Playing: " + technoMusic.getSong();
+        return "Playing: " + music.getSong();
     }
+
 
 }
