@@ -40,5 +40,4 @@ public class MusicPlayer {
         return "Playing: " + music.getSong();
     }
 
-
 }
