@@ -6,14 +6,16 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
-    @Autowired
-    @Qualifier("musicPopBean")
+
     private Music music;
+    private Music music1;
+    private Music music2;
     private String name;
     private int volume;
 
-    public MusicPlayer() {
-
+    public MusicPlayer(@Qualifier("rockMusic") Music music1, @Qualifier("technoMusic") Music music2) {
+        this.music1 = music1;
+        this.music2 = music2;
     }
 
     public String getName() {
@@ -37,7 +39,7 @@ public class MusicPlayer {
     }
 
     public String playMusic() {
-        return "Playing: " + music.getSong();
+        return "Playing: " + music1.getSong() + ", " + music2.getSong();
     }
 
 }
