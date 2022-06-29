@@ -7,6 +7,7 @@ import java.util.List;
 
 @Component
 public class TechnoMusic implements Music {
+
     private List<String> technoMusicList = new ArrayList<>();
 
     public void addMusicInList() {
@@ -17,8 +18,8 @@ public class TechnoMusic implements Music {
 
     @Override
 
-    public String getSong() {
-        return "TechnoMusic la-la-la";
+    public List<String> getSong() {
+        return technoMusicList;
     }
 
 }

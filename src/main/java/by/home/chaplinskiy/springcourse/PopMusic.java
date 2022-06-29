@@ -17,8 +17,8 @@ public class PopMusic implements Music {
     }
 
     @Override
-    public String getSong() {
-        return "PopMusic la-la-la";
+    public List<String> getSong() {
+        return popMusicList;
     }
 
 }

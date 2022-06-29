@@ -17,8 +17,9 @@ public class RockMusic implements Music {
     }
 
     @Override
-    public String getSong() {
-        return "RockMusic la-la-la";
+    public List<String> getSong() {
+
+        return rockMusicList;
     }
 
 }
