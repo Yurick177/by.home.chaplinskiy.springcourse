@@ -10,7 +10,7 @@ public class TechnoMusic implements Music {
 
     private List<String> technoMusicList = new ArrayList<>();
 
-    public void addMusicInList() {
+    TechnoMusic() {
         technoMusicList.add("TechnoMusic1");
         technoMusicList.add("TechnoMusic2");
         technoMusicList.add("TechnoMusic3");
