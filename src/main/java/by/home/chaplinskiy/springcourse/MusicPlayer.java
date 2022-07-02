@@ -16,6 +16,7 @@ public class MusicPlayer {
     @Value("${musicPlayer.volume}")
     private int volume;
 
+    @Autowired
     public MusicPlayer(@Qualifier("rockMusic") Music music1, @Qualifier("technoMusic") Music music2) {
         this.music1 = music1;
         this.music2 = music2;

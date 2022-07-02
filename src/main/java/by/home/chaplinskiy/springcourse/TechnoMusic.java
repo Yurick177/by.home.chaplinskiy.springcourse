@@ -2,20 +2,26 @@ package by.home.chaplinskiy.springcourse;
 
 import org.springframework.stereotype.Component;
 
+import javax.annotation.PostConstruct;
+import javax.annotation.PreDestroy;
+
 @Component
-public class TechnoMusic implements Music{
+public class TechnoMusic implements Music {
 
-    private TechnoMusic(){}
+    private TechnoMusic() {
+    }
 
-    public static TechnoMusic getTechnoMusic(){
+    public static TechnoMusic getTechnoMusic() {
         return new TechnoMusic();
     }
 
-    public void DoMyInitMethod(){
+    @PostConstruct
+    public void DoMyInitMethod() {
         System.out.println("вызываюсь до метода getBean ");
     }
 
-    public void DoMyDestroy(){
+    @PreDestroy
+    public void DoMyDestroy() {
         System.out.println("вызываюсь в конце по завершению программы");
     }
 
