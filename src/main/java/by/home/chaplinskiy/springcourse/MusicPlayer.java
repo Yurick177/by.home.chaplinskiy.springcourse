@@ -1,13 +1,9 @@
 package by.home.chaplinskiy.springcourse;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Component;
 
-@Component
-@Scope("prototype")
+
 public class MusicPlayer {
 
     private Music music;
@@ -18,8 +14,8 @@ public class MusicPlayer {
     @Value("${musicPlayer.volume}")
     private int volume;
 
-    @Autowired
-    public MusicPlayer(@Qualifier("rockMusic") Music music1, @Qualifier("technoMusic") Music music2) {
+    public MusicPlayer(@Qualifier("rockMusic") Music music1,
+                       @Qualifier("technoMusic") Music music2) {
         this.music1 = music1;
         this.music2 = music2;
     }
