@@ -1,14 +1,15 @@
 package by.home.chaplinskiy.springcourse;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
 import java.util.List;
 import java.util.Random;
 
-
+@Component
 public class MusicPlayer {
 
-    private Random random;
+    private final Random random;
     List<Music> genreList;
     @Value("${musicPlayer.name}")
     private String name;
@@ -24,18 +25,9 @@ public class MusicPlayer {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
     public int getVolume() {
         return volume;
     }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
 
     public void playMusic() {
         int i = random.nextInt(2);
