@@ -1,23 +1,23 @@
 package by.home.chaplinskiy.springcourse;
 
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
+
+import java.util.List;
+import java.util.Random;
 
 
 public class MusicPlayer {
 
-    private Music music;
-    private Music music1;
-    private Music music2;
+    private Random random;
+    List<Music> genreList;
     @Value("${musicPlayer.name}")
     private String name;
     @Value("${musicPlayer.volume}")
     private int volume;
 
-    public MusicPlayer(@Qualifier("rockMusic") Music music1,
-                       @Qualifier("technoMusic") Music music2) {
-        this.music1 = music1;
-        this.music2 = music2;
+    public MusicPlayer(GenreMusic genreMusic, Random random) {
+        this.genreList = genreMusic.getMusicList();
+        this.random = random;
     }
 
     public String getName() {
@@ -36,12 +36,10 @@ public class MusicPlayer {
         this.volume = volume;
     }
 
-    public void setMusic(Music music) {
-        this.music = music;
-    }
 
-    public String playMusic() {
-        return "Playing: " + music1.getSong() + ", " + music2.getSong();
+    public void playMusic() {
+        int i = random.nextInt(2);
+        System.out.println(genreList.get(i).getSong() + " " + getName() + " " + getVolume());
     }
 
 }
